@@ -1,0 +1,158 @@
+/* ==========================================================================
+   ExamEdge Student Portal Custom Stylesheet (Testbook / Adda247 Theme)
+   ========================================================================== */
+
+/* Font & Core Resets */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   Hero & Background Gradients
+   -------------------------------------------------------------------------- */
+.bg-gradient-hero {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(13, 110, 253, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Card & Interactive Components
+   -------------------------------------------------------------------------- */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Feature Icon Wrappers */
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+/* Option Buttons in Timed Quiz Runner */
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Animations
+   -------------------------------------------------------------------------- */
+@keyframes pulseDanger {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+.animate-pulse {
+  animation: pulseDanger 1.5s infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Custom Scrollbar
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 117, 125, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 117, 125, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   Motivational Marquee Ticker
+   -------------------------------------------------------------------------- */
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --------------------------------------------------------------------------
+   Brand Qualities Icon Circles
+   -------------------------------------------------------------------------- */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   Footer Wave Animations
+   -------------------------------------------------------------------------- */
+.waves-container {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: -10px;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
